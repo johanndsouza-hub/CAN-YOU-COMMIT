@@ -163,6 +163,14 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
   .peek-phone.side{width:22%;max-width:240px}
   .peek-phone.center{width:30%;max-width:320px}
 }
+
+/* FOUNDER STORY */
+.founder-block{width:100%;max-width:540px;margin:0 auto 36px;text-align:left;background:rgba(245,197,24,0.05);border:1px solid rgba(245,197,24,0.18);border-radius:16px;padding:24px 28px}
+.founder-lines{list-style:none;margin:0 0 16px 0;padding:0}
+.founder-lines li{font-size:15px;color:rgba(255,255,255,0.85);line-height:2;font-weight:500}
+.founder-lines li .founder-day{color:var(--gold);font-weight:700;font-size:16px}
+.founder-body{font-size:14px;color:var(--text);line-height:1.75;margin-bottom:14px}
+.founder-sig{font-size:13px;color:var(--gold);font-weight:600;font-style:italic;opacity:0.85}
 </style>
 </head>
 <body>
@@ -171,8 +179,19 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
 <section class="hero">
   <div class="hero-eyebrow">Coming Soon — iOS &amp; Android</div>
   <h1 class="hero-h1">CAN YOU<br>COMMIT?</h1>
-  <p class="hero-desc">Track your habits. Challenge your friends.<br><strong>Miss a day and you both lose everything.</strong></p>
-  <div class="email-wrap">
+  <p class="hero-desc">Not a tracker. A commitment.<br><strong>Miss a day and you both lose everything.</strong></p>
+
+  <div class="founder-block">
+    <ul class="founder-lines">
+      <li><span class="founder-day">Day 1</span> &mdash; I couldn&rsquo;t do a single push-up.</li>
+      <li><span class="founder-day">Day 62</span> &mdash; I do 15 every morning without thinking.</li>
+      <li><span class="founder-day">Day 120</span> &mdash; Lost 26 lbs through fasting. Not dieting. Committing.</li>
+    </ul>
+    <p class="founder-body">I built Commit because I needed something that held me accountable the way nothing else could. Not a tracker that forgave me. A commitment that didn&rsquo;t.</p>
+    <div class="founder-sig">&mdash; Johann, founder</div>
+  </div>
+
+    <div class="email-wrap">
     <div class="email-row">
       <input type="email" id="email-hero" class="email-in" placeholder="your@email.com"/>
       <button class="email-btn" onclick="submit('hero')">Notify Me</button>
@@ -190,7 +209,7 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
 </section>
 
 <div class="benefits">
-  <div class="benefit"><span class="benefit-icon">🔥</span><div><div class="benefit-title">Build real habits.</div><div class="benefit-desc">Daily check-ins with weekly reflections to make sure the path is the right one.</div></div></div>
+  <div class="benefit"><span class="benefit-icon">🔥</span><div><div class="benefit-title">Make real commitments.</div><div class="benefit-desc">Daily check-ins with weekly reflections to make sure the path is the right one.</div></div></div>
   <div class="benefit"><span class="benefit-icon">🤝</span><div><div class="benefit-title">Stay accountable.</div><div class="benefit-desc">Miss and your friend loses everything too. Real consequences keep you showing up.</div></div></div>
   <div class="benefit"><span class="benefit-icon">🛡️</span><div><div class="benefit-title">Take control of your life.</div><div class="benefit-desc">Streak Savers protect what you've built when life gets in the way.</div></div></div>
 </div>
@@ -226,7 +245,7 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
 <section class="proof">
   <div class="section-label">What early users say</div>
   <div class="quote"><p class="quote-text">"The friend streak feature is the only thing that actually kept me going. Knowing my friend would lose their streak too if I skipped — I never skipped."</p><div class="quote-author"><div class="quote-avatar">M</div><div><div class="quote-name">Mike</div><div class="quote-role">Beta Tester</div></div><div class="quote-streak">🔥 34 Days</div></div></div>
-  <div class="quote"><p class="quote-text">"I've tried every habit app. This is the first one where I actually feel something when I check in. The questions make you think."</p><div class="quote-author"><div class="quote-avatar">S</div><div><div class="quote-name">Sarah</div><div class="quote-role">Beta Tester</div></div><div class="quote-streak">🔥 21 Days</div></div></div>
+  <div class="quote"><p class="quote-text">"I've tried every tracking app. This is the first one where I actually feel something when I check in. The questions make you think."</p><div class="quote-author"><div class="quote-avatar">S</div><div><div class="quote-name">Sarah</div><div class="quote-role">Beta Tester</div></div><div class="quote-streak">🔥 21 Days</div></div></div>
 </section>
 
 <div class="divider"></div>

@@ -165,11 +165,7 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
 }
 
 /* FOUNDER STORY */
-.founder-cards{width:100%;max-width:540px;margin:0 auto 36px;display:flex;flex-direction:column;gap:14px}
-.founder-card{display:flex;align-items:flex-start;gap:14px;padding:18px;background:var(--card);border-radius:14px;border:1px solid var(--border)}
-.streak-badge{flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(245,197,24,0.08);border:1px solid rgba(245,197,24,0.2);border-radius:10px;padding:8px 12px;min-width:56px;gap:2px}
-.streak-badge .fire{font-size:18px;line-height:1}
-.streak-badge .streak-num{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:0.5px;white-space:nowrap}
+
 </style>
 </head>
 <body>
@@ -180,19 +176,21 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
   <h1 class="hero-h1">CAN YOU<br>COMMIT?</h1>
   <p class="hero-desc">Not a tracker. A commitment.<br><strong>Miss a day and you both lose everything.</strong></p>
 
-  <div class="founder-cards">
-    <div class="founder-card">
-      <div class="streak-badge"><span class="fire">&#x1F525;</span><span class="streak-num">62D</span></div>
-      <div>
-        <div class="benefit-title">Push-ups Daily</div>
-        <div class="benefit-desc">Day 1 I could not do one. Day 62 I do 15 every morning. I am not stopping until I hit 60 a day.</div>
+  <div style="width:100%;max-width:540px;margin:0 auto 36px;display:flex;flex-direction:column;gap:14px">
+    <div class="quote">
+      <p class="quote-text">Day 1 I could not do one push-up.<br>Day 62 I do 15 every single morning.<br>I am not stopping until I hit 60 a day.</p>
+      <div class="quote-author">
+        <div class="quote-avatar">J</div>
+        <div><div class="quote-name">Push-ups Daily</div><div class="quote-role">Johann, Founder</div></div>
+        <div class="quote-streak">&#x1F525; 62 Days</div>
       </div>
     </div>
-    <div class="founder-card">
-      <div class="streak-badge"><span class="fire">&#x1F525;</span><span class="streak-num">120D</span></div>
-      <div>
-        <div class="benefit-title">16hr Fasting Daily</div>
-        <div class="benefit-desc">Day 7 was the hardest thing I had done. Day 14 I was shocked I was still going. Day 120 it runs on its own. Lost 26 lbs.</div>
+    <div class="quote">
+      <p class="quote-text">Day 7 was the hardest thing I had done.<br>Day 14 I could not believe I was still going.<br>Day 120 it runs on its own. Lost 26 lbs.</p>
+      <div class="quote-author">
+        <div class="quote-avatar">J</div>
+        <div><div class="quote-name">16hr Fasting Daily</div><div class="quote-role">Johann, Founder</div></div>
+        <div class="quote-streak">&#x1F525; 120 Days</div>
       </div>
     </div>
   </div>

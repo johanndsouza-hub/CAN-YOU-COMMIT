@@ -165,12 +165,11 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
 }
 
 /* FOUNDER STORY */
-.founder-block{width:100%;max-width:540px;margin:0 auto 36px;text-align:left;background:rgba(245,197,24,0.05);border:1px solid rgba(245,197,24,0.18);border-radius:16px;padding:24px 28px}
-.founder-lines{list-style:none;margin:0 0 16px 0;padding:0}
-.founder-lines li{font-size:15px;color:rgba(255,255,255,0.85);line-height:2;font-weight:500}
-.founder-lines li .founder-day{color:var(--gold);font-weight:700;font-size:16px}
-.founder-body{font-size:14px;color:var(--text);line-height:1.75;margin-bottom:14px}
-.founder-sig{font-size:13px;color:var(--gold);font-weight:600;font-style:italic;opacity:0.85}
+.founder-cards{width:100%;max-width:540px;margin:0 auto 36px;display:flex;flex-direction:column;gap:14px}
+.founder-card{display:flex;align-items:flex-start;gap:14px;padding:18px;background:var(--card);border-radius:14px;border:1px solid var(--border)}
+.streak-badge{flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(245,197,24,0.08);border:1px solid rgba(245,197,24,0.2);border-radius:10px;padding:8px 12px;min-width:56px;gap:2px}
+.streak-badge .fire{font-size:18px;line-height:1}
+.streak-badge .streak-num{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:0.5px;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -181,17 +180,21 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
   <h1 class="hero-h1">CAN YOU<br>COMMIT?</h1>
   <p class="hero-desc">Not a tracker. A commitment.<br><strong>Miss a day and you both lose everything.</strong></p>
 
-  <div class="founder-block">
-    <ul class="founder-lines">
-      <li><span class="founder-day">Push-ups.</span> Goal: 60 a day.</li>
-      <li><span class="founder-day">Day 1.</span> I could not do one.</li>
-      <li><span class="founder-day">Day 62.</span> 15 every single morning.</li>
-      <li><span class="founder-day">16hr fasting. Day 7.</span> The hardest thing I had ever done.</li>
-      <li><span class="founder-day">Day 14.</span> I could not believe I was still going.</li>
-      <li><span class="founder-day">Day 120.</span> Automatic. But I still struggle.</li>
-    </ul>
-    <p class="founder-body">I built Commit because I needed something that did not let me off the hook. Not a tracker that forgave me. A commitment that did not.</p>
-    <div class="founder-sig">Johann, Founder</div>
+  <div class="founder-cards">
+    <div class="founder-card">
+      <div class="streak-badge"><span class="fire">&#x1F525;</span><span class="streak-num">62D</span></div>
+      <div>
+        <div class="benefit-title">Push-ups Daily</div>
+        <div class="benefit-desc">Day 1 I could not do one. Day 62 I do 15 every morning. I am not stopping until I hit 60 a day.</div>
+      </div>
+    </div>
+    <div class="founder-card">
+      <div class="streak-badge"><span class="fire">&#x1F525;</span><span class="streak-num">120D</span></div>
+      <div>
+        <div class="benefit-title">16hr Fasting Daily</div>
+        <div class="benefit-desc">Day 7 was the hardest thing I had done. Day 14 I was shocked I was still going. Day 120 it runs on its own. Lost 26 lbs.</div>
+      </div>
+    </div>
   </div>
 
     <div class="email-wrap">

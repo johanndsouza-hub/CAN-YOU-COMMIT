@@ -166,6 +166,13 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
 
 /* FOUNDER STORY */
 
+
+.fc-wrap{width:100%;max-width:540px;margin:0 auto 36px;display:flex;flex-direction:column;gap:14px}
+.fc{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px 24px;text-align:left}
+.fc-streak{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:2px;color:var(--gold);line-height:1;margin-bottom:6px}
+.fc-label{font-size:11px;font-weight:600;color:var(--text);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+.fc-days{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.9}
+.fc-days b{color:#fff;font-weight:600}
 </style>
 </head>
 <body>
@@ -176,21 +183,23 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
   <h1 class="hero-h1">CAN YOU<br>COMMIT?</h1>
   <p class="hero-desc">Not a tracker. A commitment.<br><strong>Miss a day and you both lose everything.</strong></p>
 
-  <div style="width:100%;max-width:540px;margin:0 auto 36px;display:flex;flex-direction:column;gap:14px">
-    <div class="quote">
-      <p class="quote-text">Day 1 I could not do one push-up.<br>Day 62 I do 15 every single morning.<br>I am not stopping until I hit 60 a day.</p>
-      <div class="quote-author">
-        <div class="quote-avatar">J</div>
-        <div><div class="quote-name">Push-ups Daily</div><div class="quote-role">Johann, Founder</div></div>
-        <div class="quote-streak">&#x1F525; 62 Days</div>
+  <div class="fc-wrap">
+    <div class="fc">
+      <div class="fc-streak">&#x1F525; 62 Days</div>
+      <div class="fc-label">Push-ups Daily</div>
+      <div class="fc-days">
+        <b>Day 1.</b> I could not do one push-up.<br>
+        <b>Day 62.</b> 15 every single morning.<br>
+        Goal is 60 a day. I am not stopping.
       </div>
     </div>
-    <div class="quote">
-      <p class="quote-text">Day 7 was the hardest thing I had done.<br>Day 14 I could not believe I was still going.<br>Day 120 it runs on its own. Lost 26 lbs.</p>
-      <div class="quote-author">
-        <div class="quote-avatar">J</div>
-        <div><div class="quote-name">16hr Fasting Daily</div><div class="quote-role">Johann, Founder</div></div>
-        <div class="quote-streak">&#x1F525; 120 Days</div>
+    <div class="fc">
+      <div class="fc-streak">&#x1F525; 120 Days</div>
+      <div class="fc-label">16hr Fasting Daily</div>
+      <div class="fc-days">
+        <b>Day 7.</b> The hardest thing I had done.<br>
+        <b>Day 14.</b> I could not believe I was still going.<br>
+        <b>Day 120.</b> Automatic. Lost 26 lbs.
       </div>
     </div>
   </div>

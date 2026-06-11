@@ -8,14 +8,14 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{max-width:100%;overflow-x:hidden}
-:root{--gold:#F5C518;--orange:#FF6B00;--teal:#00C9B1;--black:#080d1a;--card:rgba(255,255,255,0.04);--border:rgba(255,255,255,0.07);--text:rgba(255,255,255,0.65)}
+:root{--gold:#F5C518;--orange:#FF6B00;--teal:#00C9B1;--black:#06060E;--card:rgba(255,255,255,0.04);--border:rgba(255,255,255,0.07);--text:rgba(255,255,255,0.65)}
 html{scroll-behavior:smooth}
-body{background:#080d1a;color:#fff;font-family:'Inter',sans-serif;}
-body::before{content:'';position:fixed;top:0;left:0;right:0;height:700px;background:radial-gradient(ellipse 80% 50% at 15% 0%,rgba(20,40,140,0.7) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 85% 0%,rgba(10,30,100,0.6) 0%,transparent 60%),radial-gradient(ellipse 40% 30% at 50% 0%,rgba(30,20,120,0.4) 0%,transparent 70%);pointer-events:none;z-index:0}
+body{background:#06060E;color:#fff;font-family:'Inter',sans-serif;}
+body::before{content:'';position:fixed;top:0;left:0;right:0;height:700px;background:radial-gradient(ellipse 80% 50% at 15% 0%,rgba(40,20,100,0.7) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 85% 0%,rgba(10,25,80,0.6) 0%,transparent 60%),radial-gradient(ellipse 40% 30% at 50% 0%,rgba(60,10,80,0.4) 0%,transparent 70%);pointer-events:none;z-index:0}
 body>*{position:relative;z-index:1}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:rgba(8,13,26,0.92);backdrop-filter:blur(20px)}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:rgba(6,6,14,0.92);backdrop-filter:blur(20px)}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:6px;color:var(--gold);text-decoration:none}
 .nav-btn{background:transparent;border:1px solid rgba(255,255,255,0.2);color:#fff;padding:8px 18px;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;cursor:pointer;transition:all 0.2s;border-radius:100px}
 .nav-btn:hover{border-color:var(--gold);color:var(--gold)}
@@ -179,9 +179,17 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
 <nav><a href="#" class="nav-logo">COMMIT</a><button class="nav-btn" onclick="document.getElementById('email-hero').focus()">Get Early Access</button></nav>
 
 <section class="hero">
-  <div class="hero-eyebrow">Coming Soon — iOS &amp; Android</div>
+  <div class="hero-eyebrow">Testing Live on Web — iOS &amp; Android Coming Soon</div>
   <h1 class="hero-h1">CAN YOU<br>COMMIT?</h1>
   <p class="hero-desc">Not a tracker. A commitment.<br><strong>Miss a day and you both lose everything.</strong></p>
+
+  <div style="text-align:center;margin-bottom:32px">
+    <a href="https://app.canyoucommit.app" target="_blank" rel="noopener"
+       style="display:inline-flex;align-items:center;gap:11px;padding:14px 26px;background:var(--gold);color:#000;border-radius:100px;font-family:'Inter',sans-serif;font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;box-shadow:0 8px 24px rgba(245,197,24,0.4)">
+      <span style="font-size:18px;line-height:1">🌐</span> Try COMMIT — Web App Live
+    </a>
+    <div style="margin-top:9px;font-size:11px;color:var(--text);letter-spacing:0.5px">Works on any browser · computer or phone · no download needed</div>
+  </div>
 
   <div class="fc-wrap">
     <div class="fc">
@@ -206,13 +214,41 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
     </div>
   </div>
 
-  <!-- FOLLOW MY JOURNEY ON YOUTUBE -->
-  <div style="text-align:center;margin-top:26px">
-    <a href="https://youtube.com/@canyoucommit" target="_blank" rel="noopener"
-       style="display:inline-flex;align-items:center;gap:11px;padding:14px 26px;background:#FF0000;color:#fff;border-radius:100px;font-family:'Inter',sans-serif;font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;box-shadow:0 8px 24px rgba(255,0,0,0.3)">
-      <span style="font-size:18px;line-height:1">&#x25B6;</span> Follow My Journey on YouTube
+  <!-- WATCH THE JOURNEY — YOUTUBE SHORTS GALLERY -->
+  <div style="max-width:760px;margin:48px auto 8px;padding:34px 20px 30px;background:linear-gradient(180deg,rgba(255,0,0,0.07),rgba(255,255,255,0.015));border:1px solid rgba(255,0,0,0.18);border-radius:26px;text-align:center">
+    <div style="display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FF4040;margin-bottom:14px">
+      <span style="display:inline-flex;width:9px;height:9px;border-radius:50%;background:#FF0000;box-shadow:0 0 10px #FF0000"></span> Live &middot; New Short Every Day
+    </div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,7vw,58px);letter-spacing:2px;line-height:0.92;color:#fff;margin:0 0 10px">WATCH THE JOURNEY</h2>
+    <p style="font-size:14px;color:var(--text);line-height:1.6;max-width:440px;margin:0 auto 28px">No actors. No edits. Just the founder showing up every single day &mdash; watch the streak grow on camera.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;max-width:660px;margin:0 auto 28px">
+      <a href="https://youtube.com/shorts/3YVahQl1s30" target="_blank" rel="noopener" style="position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;display:block;border:1px solid var(--border);background:#000;text-decoration:none">
+        <img src="https://i.ytimg.com/vi/3YVahQl1s30/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/3YVahQl1s30/hqdefault.jpg'" alt="Watch this short on YouTube" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05),rgba(0,0,0,0.55))"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,0,0,0.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(255,0,0,0.5)"><span style="color:#fff;font-size:17px;margin-left:3px">&#x25B6;</span></div>
+        <div style="position:absolute;left:10px;bottom:9px;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,0.85)">&#x25B6; Watch</div>
+      </a>
+      <a href="https://youtube.com/shorts/W965cdDe3Pc" target="_blank" rel="noopener" style="position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;display:block;border:1px solid var(--border);background:#000;text-decoration:none">
+        <img src="https://i.ytimg.com/vi/W965cdDe3Pc/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/W965cdDe3Pc/hqdefault.jpg'" alt="Watch this short on YouTube" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.05),rgba(0,0,0,0.55))"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,0,0,0.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(255,0,0,0.5)"><span style="color:#fff;font-size:17px;margin-left:3px">&#x25B6;</span></div>
+        <div style="position:absolute;left:10px;bottom:9px;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,0.85)">&#x25B6; Watch</div>
+      </a>
+      <div style="position:relative;aspect-ratio:9/16;border-radius:16px;border:1px dashed rgba(255,255,255,0.16);background:rgba(255,255,255,0.02);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:10px;text-align:center">
+        <div style="font-size:25px;opacity:0.45">&#x1F3AC;</div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text)">New Short</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.32)">Dropping soon</div>
+      </div>
+      <div style="position:relative;aspect-ratio:9/16;border-radius:16px;border:1px dashed rgba(255,255,255,0.16);background:rgba(255,255,255,0.02);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:10px;text-align:center">
+        <div style="font-size:25px;opacity:0.45">&#x1F3AC;</div>
+        <div style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text)">New Short</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.32)">Dropping soon</div>
+      </div>
+    </div>
+    <a href="https://youtube.com/@canyoucommit" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:11px;padding:15px 30px;background:#FF0000;color:#fff;border-radius:100px;font-family:'Inter',sans-serif;font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;box-shadow:0 8px 28px rgba(255,0,0,0.4)">
+      <span style="font-size:18px;line-height:1">&#x25B6;</span> Subscribe on YouTube
     </a>
-    <div style="margin-top:9px;font-size:11px;letter-spacing:0.5px;color:var(--teal)">New short every single day. Watch the founder commit in real time.</div>
+    <div style="margin-top:11px;font-size:11px;letter-spacing:0.5px;color:var(--teal)">Watch the founder commit in real time &mdash; one short, every single day.</div>
   </div>
 
     <div class="email-wrap">
@@ -293,6 +329,7 @@ footer{border-top:1px solid var(--border);padding:20px 24px;display:flex;align-i
   </div>
   <p class="email-success" id="success-bottom" style="text-align:center;margin-top:12px">🔥 You're on the list.</p>
   <div class="store-row">
+    <a href="https://app.canyoucommit.app" target="_blank" rel="noopener" class="store-pill" style="border-color:var(--gold)"><span style="font-size:16px">🌐</span><div><div class="store-pill-sub" style="color:var(--gold)">Available Now</div><div class="store-pill-name">Web App</div></div></a>
     <a href="#" class="store-pill"><span style="font-size:16px">🍎</span><div><div class="store-pill-sub">Coming Soon</div><div class="store-pill-name">App Store</div></div></a>
     <a href="#" class="store-pill"><span style="font-size:16px">▶</span><div><div class="store-pill-sub">Coming Soon</div><div class="store-pill-name">Google Play</div></div></a>
   </div>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commit — The app for promises you actually keep</title>
+<meta name="description" content="Commit is a commitment app for people who want visible proof that they show up. Create a promise, keep the streak, and make consistency visible.">
+<meta property="og:title" content="Commit — Turn promises into proof">
+<meta property="og:description" content="A new kind of commitment app built around visibility, accountability, and streaks that matter.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://canyoucommit.app/index3.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070914;
+  --panel:#0f1424;
+  --panel2:#151b2e;
+  --ink:#f8fafc;
+  --muted:#9aa4b5;
+  --line:rgba(255,255,255,.105);
+  --gold:#ffc93c;
+  --gold2:#ffe38f;
+  --orange:#f2731c;
+  --green:#36d985;
+  --navy:#080d1a;
+  --shadow:0 28px 90px rgba(0,0,0,.52);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 50% -20%,rgba(255,201,60,.19),transparent 34%),
+    radial-gradient(circle at 100% 10%,rgba(242,115,28,.12),transparent 28%),
+    linear-gradient(180deg,#070914 0%,#090d19 42%,#070914 100%);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(1160px,100%);margin:0 auto;padding:0 24px}
+.nav{position:sticky;top:0;z-index:30;border-bottom:1px solid var(--line);background:rgba(7,9,20,.72);backdrop-filter:blur(20px)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:21px;letter-spacing:-.04em}
+.mark{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--orange));display:grid;place-items:center;color:#1d1200;box-shadow:0 12px 34px rgba(255,201,60,.23)}
+.nav-links{display:flex;gap:24px;color:var(--muted);font-size:14px;font-weight:600}.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:14px 22px;font-size:15px;font-weight:800;border:1px solid transparent;transition:.18s;white-space:nowrap}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--orange));color:#211300;box-shadow:0 14px 36px rgba(242,115,28,.28)}
+.btn-primary:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn-secondary{border-color:var(--line);background:rgba(255,255,255,.035);color:#d7deea}.btn-secondary:hover{background:rgba(255,255,255,.075);color:#fff}
+.hero{padding:90px 0 58px;text-align:center;position:relative}.hero-copy{max-width:920px;margin:0 auto;position:relative;z-index:2}.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,201,60,.24);background:rgba(255,201,60,.09);color:var(--gold2);padding:8px 15px;border-radius:999px;font-size:13px;font-weight:900;letter-spacing:.02em;margin-bottom:24px}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(54,217,133,.14)}
+h1{font-size:clamp(50px,8vw,96px);line-height:.89;letter-spacing:-.085em;font-weight:900;margin-bottom:26px}.gold{color:var(--gold)}
+.lead{max-width:720px;margin:0 auto 30px;color:#c3ccda;font-size:clamp(18px,2.2vw,23px)}.lead strong{color:#fff}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.micro{margin-top:18px;color:var(--muted);font-size:13.5px}
+.hero-visual{margin:62px auto 0;position:relative;max-width:920px;min-height:520px;display:flex;align-items:center;justify-content:center}.hero-visual:before{content:"";position:absolute;width:78%;height:58%;background:radial-gradient(ellipse at center,rgba(255,201,60,.23),transparent 67%);filter:blur(14px)}
+.phone{position:relative;background:#02040a;border:1px solid rgba(255,255,255,.13);border-radius:42px;padding:8px;box-shadow:var(--shadow)}.screen{position:relative;overflow:hidden;border-radius:34px;background:#000;line-height:0}.screen:after{content:"";position:absolute;left:0;right:0;top:0;height:5.2%;background:var(--mask,#09112c);z-index:2}.phone-main{width:min(310px,74vw);z-index:3}.phone-left,.phone-right{position:absolute;width:220px;opacity:.94}.phone-left{left:80px;top:92px;transform:rotate(-6deg)}.phone-right{right:76px;top:116px;transform:rotate(6deg)}
+.note{position:absolute;z-index:4;left:50px;bottom:56px;width:260px;text-align:left;border:1px solid rgba(255,255,255,.12);background:rgba(15,20,36,.82);backdrop-filter:blur(18px);border-radius:24px;padding:18px;box-shadow:0 18px 60px rgba(0,0,0,.38)}.note b{display:block;font-size:15px;margin-bottom:6px}.note p{font-size:13.5px;color:var(--muted)}
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.025)}.strip-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}.stat{padding:26px 18px;text-align:center}.stat b{display:block;font-size:30px;letter-spacing:-.05em}.stat span{display:block;margin-top:4px;color:var(--muted);font-size:14px}
+section{padding:96px 0}.center{max-width:760px;margin:0 auto;text-align:center}.kicker{color:var(--gold);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.14em;margin-bottom:14px}h2{font-size:clamp(34px,5vw,58px);line-height:.98;letter-spacing:-.06em;font-weight:900;margin-bottom:18px}.sub{color:var(--muted);font-size:18px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}.card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border-radius:30px;padding:28px;min-height:280px}.icon{width:46px;height:46px;border-radius:15px;background:rgba(255,201,60,.11);border:1px solid rgba(255,201,60,.2);display:grid;place-items:center;margin-bottom:22px;font-weight:900;color:var(--gold)}.card h3{font-size:23px;letter-spacing:-.04em;margin-bottom:10px}.card p{color:var(--muted)}
+.split{display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;align-items:center}.copy{max-width:480px}.bullets{display:grid;gap:16px;margin-top:26px}.bullet{display:flex;gap:12px;align-items:flex-start}.check{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:rgba(54,217,133,.12);color:var(--green);font-weight:900;flex:0 0 auto}.bullet p{color:var(--muted)}.phone-row{display:flex;gap:18px;align-items:flex-start;justify-content:center}.mini{width:190px}.mini:nth-child(2){margin-top:44px}.mini:nth-child(3){margin-top:16px}
+.manifesto{background:linear-gradient(135deg,rgba(255,201,60,.11),rgba(242,115,28,.075),rgba(255,255,255,.02));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.quote{max-width:900px;margin:0 auto;text-align:center}.quote blockquote{font-size:clamp(28px,4.2vw,54px);line-height:1.06;letter-spacing:-.065em;font-weight:900}.quote p{max-width:650px;margin:22px auto 0;color:var(--muted);font-size:18px}
+.final{padding-top:104px}.final-box{border:1px solid rgba(255,255,255,.13);background:radial-gradient(circle at top,rgba(255,201,60,.18),transparent 42%),linear-gradient(180deg,#151b2e,#090d19);border-radius:40px;text-align:center;padding:68px 28px;box-shadow:var(--shadow)}.final-box h2{max-width:780px;margin-left:auto;margin-right:auto}.final-box .sub{max-width:620px;margin:0 auto 28px}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:14px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a:hover{color:var(--gold)}.links{display:flex;gap:16px;flex-wrap:wrap}
+@media(max-width:900px){.nav-links{display:none}.hero{padding-top:66px}.hero-visual{min-height:470px}.phone-left{left:10px}.phone-right{right:10px}.note{left:20px}.cards,.split,.strip-inner{grid-template-columns:1fr}.copy{text-align:center;margin:0 auto}.bullet{text-align:left}.phone-row{margin-top:28px;flex-wrap:wrap}}
+@media(max-width:560px){.wrap{padding:0 18px}.hero-visual{min-height:auto;display:block}.phone-main{margin:0 auto}.phone-left,.phone-right{display:none}.note{position:relative;left:auto;bottom:auto;margin:18px auto 0}.actions .btn{width:100%}.mini{width:165px}.final-box{border-radius:28px;padding:44px 20px}.hero{padding-bottom:42px}section{padding:72px 0}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top"><span class="mark">C</span><span>Commit</span></a>
+    <div class="nav-links">
+      <a href="#difference">Difference</a>
+      <a href="#system">System</a>
+      <a href="#proof">Proof</a>
+    </div>
+    <a class="btn btn-primary" href="https://app.canyoucommit.app?utm_source=landing_index3&utm_medium=site&utm_campaign=nav_cta">Open app</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-copy">
+    <div class="badge"><span class="dot"></span> Not a habit tracker. A commitment app.</div>
+    <h1>The app for promises you <span class="gold">actually keep.</span></h1>
+    <p class="lead"><strong>Commit</strong> turns private intentions into visible proof. Start a streak, share accountability, and build the evidence that you show up.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://app.canyoucommit.app?utm_source=landing_index3&utm_medium=site&utm_campaign=hero_primary">Start a commitment</a>
+      <a class="btn btn-secondary" href="#difference">Why it works</a>
+    </div>
+    <p class="micro">Live on web. No download needed. Built in public.</p>
+  </div>
+
+  <div class="wrap hero-visual">
+    <div class="phone phone-left"><div class="screen" style="--mask:#101833"><img src="https://canyoucommit.app/images/friends.PNG" alt="Commit shared streaks"></div></div>
+    <div class="phone phone-main"><div class="screen" style="--mask:#09112C"><img src="https://canyoucommit.app/images/home.PNG" alt="Commit home screen"></div></div>
+    <div class="phone phone-right"><div class="screen" style="--mask:#09112C"><img src="https://canyoucommit.app/images/calendar.PNG" alt="Commit streak calendar"></div></div>
+    <div class="note"><b>Visibility changes behaviour.</b><p>When a promise can be seen, it becomes harder to quietly abandon.</p></div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap strip-inner">
+    <div class="stat"><b>1</b><span>commitment to start</span></div>
+    <div class="stat"><b>7</b><span>days to create proof</span></div>
+    <div class="stat"><b>D30</b><span>retention worth measuring</span></div>
+  </div>
+</div>
+
+<section id="difference">
+  <div class="wrap center">
+    <div class="kicker">The difference</div>
+    <h2>Habit apps measure. Commit makes it visible.</h2>
+    <p class="sub">The goal is not another dashboard. The goal is a simple system that makes consistency harder to ignore.</p>
+  </div>
+  <div class="wrap cards">
+    <div class="card"><div class="icon">01</div><h3>Make the promise.</h3><p>Choose the thing that matters and define what showing up looks like today.</p></div>
+    <div class="card"><div class="icon">02</div><h3>Protect the streak.</h3><p>The streak becomes proof. Every check-in adds weight to the identity you are building.</p></div>
+    <div class="card"><div class="icon">03</div><h3>Invite accountability.</h3><p>Shared commitments make the promise visible to someone else, not just your future self.</p></div>
+  </div>
+</section>
+
+<section id="system">
+  <div class="wrap split">
+    <div class="copy">
+      <div class="kicker">The system</div>
+      <h2>Built for the moment motivation fades.</h2>
+      <p class="sub">Commit uses simple behavioural pressure: visibility, pride, streak loss, and social follow-through.</p>
+      <div class="bullets">
+        <div class="bullet"><span class="check">✓</span><p><strong>Shared streaks</strong> make accountability mutual.</p></div>
+        <div class="bullet"><span class="check">✓</span><p><strong>Wall of gold</strong> turns consistency into something you can see.</p></div>
+        <div class="bullet"><span class="check">✓</span><p><strong>Milestone cards</strong> make progress shareable.</p></div>
+      </div>
+    </div>
+    <div class="phone-row">
+      <div class="phone mini"><div class="screen" style="--mask:#101833"><img src="https://canyoucommit.app/images/friends.PNG" alt="Shared streaks with friends"></div></div>
+      <div class="phone mini"><div class="screen" style="--mask:#09112C"><img src="https://canyoucommit.app/images/calendar.PNG" alt="Commit wall of gold"></div></div>
+      <div class="phone mini"><div class="screen" style="--mask:#020617"><img src="https://canyoucommit.app/images/share.PNG" alt="Commit milestone sharing"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto" id="proof">
+  <div class="wrap quote">
+    <div class="kicker">The point</div>
+    <blockquote>Do not just say you are committed. Build the proof.</blockquote>
+    <p>Commit is for promises that deserve more than good intentions: training, learning, recovery, discipline, relationships, and work that needs daily follow-through.</p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap final-box">
+    <div class="kicker">Start small</div>
+    <h2>One promise. One check-in. One visible streak.</h2>
+    <p class="sub">The first commitment does not need to be impressive. It needs to be real.</p>
+    <a class="btn btn-primary" href="https://app.canyoucommit.app?utm_source=landing_index3&utm_medium=site&utm_campaign=final_cta">Try Commit free</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 Commit. Built for promises that matter.</div>
+    <div class="links">
+      <a href="https://www.youtube.com/@canyoucommit">YouTube</a>
+      <a href="https://www.tiktok.com/@canyoucommit">TikTok</a>
+      <a href="https://www.instagram.com/canyoucommit.app">Instagram</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

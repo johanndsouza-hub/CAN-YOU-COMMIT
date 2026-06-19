@@ -359,7 +359,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <p class="founder-quote">"I am building Commit in public because the product should prove its own point: show up, keep the streak, and make the work visible."</p>
       <p class="founder-attr">Follow the daily build on YouTube, TikTok, and Instagram.</p>
       <p class="founder-tagline">Consistency reveals what's possible.</p>
-      <div class="streak-grid" aria-label="Founder commitment streaks">
+      <div class="streak-live-label"><span id="streak-live-dot" style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--muted);margin-right:6px;vertical-align:middle;transition:background .4s"></span><span id="streak-live-text" style="font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-weight:600">Loading&hellip;</span></div>
+      <div id="founder-streak-grid" class="streak-grid" aria-label="Founder commitment streaks">
         <div class="streak-card"><strong>Fasting 16h</strong><span>138D</span></div>
         <div class="streak-card"><strong>Daily vlog</strong><span>10D</span></div>
         <div class="streak-card"><strong>Push ups daily</strong><span>79D</span></div>
@@ -424,5 +425,30 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var FURL="https://firestore.googleapis.com/v1/projects/streak-hero-ee21e/databases/(default)/documents/public_profiles/1";
+  var grid=document.getElementById("founder-streak-grid");
+  var dot=document.getElementById("streak-live-dot");
+  var txt=document.getElementById("streak-live-text");
+  if(!grid)return;
+  var ctrl=new AbortController();
+  setTimeout(function(){ctrl.abort();},3500);
+  fetch(FURL,{signal:ctrl.signal})
+    .then(function(r){return r.json();})
+    .then(function(data){
+      var vals=data.fields.streaks.arrayValue.values;
+      grid.innerHTML=vals.map(function(s){
+        var f=s.mapValue.fields;
+        return '<div class="streak-card"><strong>'+f.name.stringValue+'</strong><span>'+f.days.integerValue+'D</span></div>';
+      }).join("");
+      if(dot){dot.style.background="#FFD04A";}
+      if(txt){txt.textContent="Live from the app";}
+    })
+    .catch(function(){
+      if(txt){txt.textContent="Updated daily";}
+    });
+})();
+</script>
 </body>
 </html>

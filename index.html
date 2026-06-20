@@ -12,6 +12,14 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://streakhero.jdfamily.xyz/assets/icon-512.png">
+<!-- Google Analytics 4 — replace G-XXXXXXXXXX with real Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -218,7 +226,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <a href="#widget">Widget</a>
       <a href="#watch">Watch</a>
     </div>
-    <a class="btn btn-primary" href="https://app.canyoucommit.app?utm_source=landing_index2&utm_medium=site&utm_campaign=hero_nav">Open the app</a>
+    <a class="btn btn-primary" href="https://app.canyoucommit.app?utm_source=landing&utm_medium=site&utm_campaign=hero_nav" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{cta_location:'nav',campaign:'hero_nav'});}">Open the app</a>
   </div>
 </nav>
 
@@ -229,7 +237,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <h1>Turn Promises<br>Into <span class="gold">Proof.</span></h1>
       <p class="lead"><strong>Consistency Over Results.</strong> Results are the by-product of consistency. Show up. Stack the days.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://app.canyoucommit.app?utm_source=landing_index2&utm_medium=site&utm_campaign=hero_primary">Start your first commitment</a>
+        <a class="btn btn-primary" href="https://app.canyoucommit.app?utm_source=landing&utm_medium=site&utm_campaign=hero_primary" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{cta_location:'hero',campaign:'hero_primary'});}">Start your first commitment</a>
         <a class="btn btn-ghost" href="#why">See why it works</a>
       </div>
       <p class="tiny">Live on web today. No download needed. iOS coming soon.</p>
@@ -419,7 +427,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <div class="kicker">Start today</div>
       <h2>The promise does not need to be big. It needs to be kept.</h2>
       <p class="sub">One commitment. One check-in. Start the proof.</p>
-      <a class="btn btn-primary" href="https://app.canyoucommit.app?utm_source=landing_index2&utm_medium=site&utm_campaign=final_cta">Try Commit free</a>
+      <a class="btn btn-primary" href="https://app.canyoucommit.app?utm_source=landing&utm_medium=site&utm_campaign=final_cta" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{cta_location:'final',campaign:'final_cta'});}">Try Commit free</a>
     </div>
   </div>
 </section>

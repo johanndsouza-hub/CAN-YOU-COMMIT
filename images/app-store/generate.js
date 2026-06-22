@@ -144,7 +144,7 @@ async function contactSheet(files, output, height) {
 }
 
 async function main() {
-  for (const source of ['home2.PNG', 'calendar.PNG', 'friends.PNG', 'share.PNG', 'widget_rgb.png', 'largewidget.png']) {
+  for (const source of ['home2.PNG', 'calendar.PNG', 'friends2.jpg', 'share.PNG', 'widget_rgb.png', 'largewidget.png']) {
     if (!fs.existsSync(path.join(sourceDir, source))) throw new Error(`Missing source image: images/${source}`);
   }
   if (JSON.stringify(concepts).includes('\u2014')) throw new Error('Generated copy must not contain em dashes');

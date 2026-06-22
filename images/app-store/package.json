@@ -1,0 +1,13 @@
+{
+  "name": "commit-app-store-screenshots",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Deterministic COM-79 App Store screenshot generator",
+  "scripts": {
+    "generate": "node generate.js",
+    "verify": "node verify.js"
+  },
+  "dependencies": {
+    "sharp": "0.35.2"
+  }
+}

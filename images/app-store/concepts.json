@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "01-stay-accountable-to-yourself",
+    "eyebrow": "KEEP THE PROMISE",
+    "headline": ["Stay Accountable", "To Yourself"],
+    "subheadline": "Keep promises to yourself through accountability.",
+    "image": "home2.PNG",
+    "position": "top",
+    "accent": "#00D2FF"
+  },
+  {
+    "slug": "02-stop-starting-over",
+    "eyebrow": "CONSISTENCY OVER RESULTS",
+    "headline": ["Stop Starting Over"],
+    "subheadline": "Build consistency that lasts beyond motivation.",
+    "image": "calendar.PNG",
+    "position": "top",
+    "accent": "#00D2FF"
+  },
+  {
+    "slug": "03-accountability-changes-everything",
+    "eyebrow": "YOUR COMMIT PARTNER",
+    "headline": ["Accountability", "Changes Everything"],
+    "subheadline": "A COMMIT Partner helps you follow through.",
+    "image": "friends.PNG",
+    "position": "top",
+    "accent": "#00D2FF"
+  },
+  {
+    "slug": "04-never-break-momentum",
+    "eyebrow": "PROTECT YOUR PROGRESS",
+    "headline": ["Never Break Momentum"],
+    "subheadline": "One missed day does not have to erase your progress.",
+    "image": "calendar.PNG",
+    "extract": { "left": 0, "top": 610, "width": 960, "height": 1469 },
+    "position": "top",
+    "accent": "#FFD700"
+  },
+  {
+    "slug": "05-every-promise-becomes-proof",
+    "eyebrow": "TURN PROMISES INTO PROOF",
+    "headline": ["Every Promise", "Becomes Proof"],
+    "subheadline": "Every completed day becomes visible proof.",
+    "image": "share.PNG",
+    "position": "top",
+    "accent": "#FFD700"
+  },
+  {
+    "slug": "06-keep-your-promise-in-sight",
+    "eyebrow": "THE COMMIT WIDGET",
+    "headline": ["Keep Your Promise", "In Sight"],
+    "subheadline": "Your commitment stays visible on your Home Screen.",
+    "image": "widget_rgb.png",
+    "position": "centre",
+    "accent": "#FF9800",
+    "widgetOnly": true
+  }
+]

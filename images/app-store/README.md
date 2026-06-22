@@ -8,7 +8,7 @@ The generator reads the real application screenshots from the parent `images/` f
 
 - `home2.PNG`
 - `calendar.PNG`
-- `friends.PNG`
+- `friends2.jpg`
 - `share.PNG`
 - `widget_rgb.png`
 - `largewidget.png` is retained as the alternate widget source listed in COM-79
@@ -42,3 +42,5 @@ The current sequence follows the revised COM-79 description:
 4. Never Break Momentum
 5. Every Promise Becomes Proof
 6. Keep Your Promise In Sight
+
+Screenshot 3 uses `friends2.jpg`, showing COMMIT Partner wording and Alex Chen's 60-day shared streak.

@@ -5,6 +5,7 @@
     "headline": ["Stay Accountable", "To Yourself"],
     "subheadline": "Keep promises to yourself through accountability.",
     "image": "home2.PNG",
+    "extract": { "left": 0, "top": 300, "width": 960, "height": 1779 },
     "position": "top",
     "accent": "#00D2FF"
   },
@@ -22,7 +23,8 @@
     "eyebrow": "YOUR COMMIT PARTNER",
     "headline": ["Accountability", "Changes Everything"],
     "subheadline": "A COMMIT Partner helps you follow through.",
-    "image": "friends.PNG",
+    "image": "friends2.jpg",
+    "extract": { "left": 40, "top": 570, "width": 640, "height": 1030 },
     "position": "top",
     "accent": "#00D2FF"
   },

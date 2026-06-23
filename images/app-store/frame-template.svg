@@ -6,15 +6,12 @@
       <stop offset="1" stop-color="#031C2B"/>
     </linearGradient>
     <radialGradient id="glow">
-      <stop offset="0" stop-color="{{ACCENT}}" stop-opacity="0.22"/>
+      <stop offset="0" stop-color="{{ACCENT}}" stop-opacity="0.18"/>
       <stop offset="1" stop-color="{{ACCENT}}" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <rect width="100%" height="100%" fill="url(#bg)"/>
   <ellipse cx="{{GLOW_X}}" cy="{{GLOW_Y}}" rx="{{GLOW_RX}}" ry="{{GLOW_RY}}" fill="url(#glow)"/>
-  <text x="{{MARGIN}}" y="{{EYEBROW_Y}}" fill="{{ACCENT}}" font-family="DejaVu Sans, Arial, sans-serif" font-size="{{EYEBROW_SIZE}}" font-weight="700" letter-spacing="{{TRACKING}}">{{EYEBROW}}</text>
   <text y="{{HEADLINE_Y}}" fill="#F4F7FB" font-family="DejaVu Sans, Arial, sans-serif" font-size="{{HEADLINE_SIZE}}" font-weight="700" letter-spacing="-2">{{HEADLINE}}</text>
-  <text x="{{MARGIN}}" y="{{SUB_Y}}" fill="#A7B0C3" font-family="DejaVu Sans, Arial, sans-serif" font-size="{{SUB_SIZE}}" font-weight="400">{{SUBHEADLINE}}</text>
   <text x="{{MARGIN}}" y="{{FOOTER_BASELINE}}" fill="#FFD700" font-family="DejaVu Sans, Arial, sans-serif" font-size="{{FOOTER_SIZE}}" font-weight="700" letter-spacing="{{TRACKING}}">COMMIT</text>
-  <text x="{{FOOTER_RIGHT}}" y="{{FOOTER_BASELINE}}" fill="#8290A8" text-anchor="end" font-family="DejaVu Sans, Arial, sans-serif" font-size="{{FOOTER_SMALL}}" font-weight="600">TURN PROMISES INTO PROOF</text>
 </svg>

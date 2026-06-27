@@ -139,12 +139,12 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
   <div class="wrap">
     <h2>I built this because I needed it.</h2>
     <p class="text">I kept breaking promises to myself. So I built a small app that makes the promise visible every day. The streak is not magic. It is just proof that I showed up.</p>
-    <div id="founder-streak-grid" class="proof" aria-label="Founder streaks">
+    <div class="proof" aria-label="Founder streaks">
       <div class="card"><strong>Fasting 16h</strong><span>140D</span></div>
       <div class="card"><strong>Daily vlog</strong><span>10D</span></div>
       <div class="card"><strong>Push ups daily</strong><span>79D</span></div>
     </div>
-    <p id="live-streak-status" class="live-note">Updated daily.</p>
+    <p class="live-note">Current examples from my own Commit account.</p>
   </div>
 </section>
 
@@ -182,55 +182,5 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
     </div>
   </div>
 </footer>
-
-<script>
-(function(){
-  var url="https://firestore.googleapis.com/v1/projects/streak-hero-ee21e/databases/(default)/documents/public_profiles/1";
-  var grid=document.getElementById("founder-streak-grid");
-  var status=document.getElementById("live-streak-status");
-  if(!grid)return;
-
-  function readString(field){
-    return field && (field.stringValue || field.integerValue || field.doubleValue || field.booleanValue || "");
-  }
-
-  function readNumber(field){
-    if(!field)return "";
-    return field.integerValue || field.doubleValue || field.stringValue || "";
-  }
-
-  function renderCard(name, days){
-    var safeName=String(name || "Commitment").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});
-    var safeDays=String(days || "0").replace(/[^0-9.]/g,"");
-    return '<div class="card"><strong>'+safeName+'</strong><span>'+safeDays+'D</span></div>';
-  }
-
-  var controller=new AbortController();
-  setTimeout(function(){controller.abort();},5000);
-
-  fetch(url,{signal:controller.signal,cache:"no-store"})
-    .then(function(response){
-      if(!response.ok)throw new Error("Firestore request failed");
-      return response.json();
-    })
-    .then(function(data){
-      var values=data && data.fields && data.fields.streaks && data.fields.streaks.arrayValue && data.fields.streaks.arrayValue.values;
-      if(!Array.isArray(values) || values.length===0)throw new Error("No streak values found");
-
-      var html=values.slice(0,6).map(function(item){
-        var fields=item && item.mapValue && item.mapValue.fields;
-        if(!fields)return "";
-        return renderCard(readString(fields.name),readNumber(fields.days));
-      }).filter(Boolean).join("");
-
-      if(!html)throw new Error("No streak cards rendered");
-      grid.innerHTML=html;
-      if(status)status.textContent="Live from the app.";
-    })
-    .catch(function(){
-      if(status)status.textContent="Streaks update daily.";
-    });
-})();
-</script>
 </body>
 </html>

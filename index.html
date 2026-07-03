@@ -15,6 +15,14 @@
 <meta name="twitter:title" content="Commit — One promise. One daily check-in.">
 <meta name="twitter:description" content="A simple streak app for promises you actually want to keep.">
 <meta name="twitter:image" content="https://canyoucommit.app/images/home.PNG">
+<!-- Google Analytics 4 (COM-82) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VB569Z080K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VB569Z080K');
+</script>
 <style>
 :root{
   --bg:#090b10;
@@ -113,7 +121,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
     <div class="nav-links">
       <a href="#proof">Proof</a>
       <a href="#follow">Follow</a>
-      <a class="button" href="https://app.canyoucommit.app?utm_source=landing&utm_medium=site&utm_campaign=nav">Open app</a>
+      <a class="button" href="https://app.canyoucommit.app?utm_source=landing&utm_medium=site&utm_campaign=nav" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{cta_location:'nav',campaign:'nav'});}">Open app</a>
     </div>
   </div>
 </nav>
@@ -124,8 +132,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
       <h1>One promise.<br>One daily check-in.</h1>
       <p class="lead">Commit is a simple streak app for promises you actually want to keep.</p>
       <div class="actions">
-        <a class="button" href="https://app.canyoucommit.app?utm_source=landing&utm_medium=site&utm_campaign=hero">Open the app</a>
-        <a class="button secondary" href="https://www.youtube.com/@canyoucommit">Watch the build</a>
+        <a class="button" href="https://app.canyoucommit.app?utm_source=landing&utm_medium=site&utm_campaign=hero" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{cta_location:'hero',campaign:'hero'});}">Open the app</a>
+        <a class="button secondary" href="https://www.youtube.com/@canyoucommit" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{cta_location:'hero_watch',campaign:'youtube'});}">Watch the build</a>
       </div>
       <p class="note">Free on web and iOS.</p>
     </div>
@@ -139,12 +147,12 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
   <div class="wrap">
     <h2>I built this because I needed it.</h2>
     <p class="text">I kept breaking promises to myself. So I built a small app that makes the promise visible every day. The streak is not magic. It is just proof that I showed up.</p>
-    <div class="proof" aria-label="Founder streaks">
+    <div class="proof" id="founder-proof" aria-label="Founder streaks">
       <div class="card"><strong>Fasting 16h</strong><span>140D</span></div>
       <div class="card"><strong>Daily vlog</strong><span>10D</span></div>
       <div class="card"><strong>Push ups daily</strong><span>79D</span></div>
     </div>
-    <p class="live-note">Current examples from my own Commit account.</p>
+    <p class="live-note" id="live-note">Current examples from my own Commit account.</p>
   </div>
 </section>
 
@@ -182,5 +190,25 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
     </div>
   </div>
 </footer>
+<!-- Live founder streaks: static cards above are the fallback; this swaps in
+     real numbers from the founderStreaks Cloud Function when reachable. -->
+<script>
+(function(){
+  var grid = document.getElementById('founder-proof');
+  var note = document.getElementById('live-note');
+  if (!grid || !window.fetch) return;
+  fetch('https://founderstreaks-q37u2kl4qa-uc.a.run.app', { mode: 'cors' })
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){
+      if (!d || !d.streaks || !d.streaks.length) return;
+      var esc = function(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); };
+      grid.innerHTML = d.streaks.map(function(x){
+        return '<div class="card"><strong>' + esc(x.name) + '</strong><span>' + (parseInt(x.streak,10)||0) + esc(x.unit||'D') + '</span></div>';
+      }).join('');
+      if (note) note.textContent = 'Live from my Commit account right now.';
+    })
+    .catch(function(){ /* static fallback stays */ });
+})();
+</script>
 </body>
 </html>

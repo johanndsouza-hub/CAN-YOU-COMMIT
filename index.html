@@ -132,7 +132,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
       <h1>One promise.<br>One daily check-in.</h1>
       <p class="lead">Commit is a simple streak app for promises you actually want to keep.</p>
       <div class="actions">
-        <a class="button" href="https://app.canyoucommit.app?utm_source=landing&utm_medium=site&utm_campaign=hero" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{cta_location:'hero',campaign:'hero'});}">Open the app</a>
+        <a class="button" href="https://apps.apple.com/app/commit-stay-accountable/id6776469835" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{cta_location:'hero_appstore',campaign:'appstore'});}">Download on the App&nbsp;Store</a>
+        <a class="button secondary" href="https://app.canyoucommit.app?utm_source=landing&utm_medium=site&utm_campaign=hero" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{cta_location:'hero',campaign:'hero'});}">Open the web app</a>
         <a class="button secondary" href="https://www.youtube.com/@canyoucommit" onclick="if(typeof gtag!=='undefined'){gtag('event','cta_click',{cta_location:'hero_watch',campaign:'youtube'});}">Watch the build</a>
       </div>
       <p class="note">Free on web and iOS.</p>
@@ -191,7 +192,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
   </div>
 </footer>
 <!-- Live founder streaks: static cards above are the fallback; this swaps in
-     real numbers from the founderStreaks Cloud Function when reachable. johann -->
+     real numbers from the founderStreaks Cloud Function when reachable. -->
 <script>
 (function(){
   var grid = document.getElementById('founder-proof');

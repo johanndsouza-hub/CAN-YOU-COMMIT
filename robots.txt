@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /index2.html
+Disallow: /index3.html
+
+Sitemap: https://canyoucommit.app/sitemap.xml
